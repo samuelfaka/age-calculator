@@ -63,9 +63,10 @@ const Hero = () => {
   };
 
   return (
-    <div className='container flex flex-col items-center justify-center h-[100vh]'>
-      <div className='bg-white w-[100vw] lg:w-[33vw] p-3 h-[55vh] lg:h-[60vh] lg:p-8 rounded-br-full'>
-        <div className='flex flex-col cursor-pointer gap-[20px]'>
+    <div className='container flex flex-col items-center justify-center h-[100vh] overflow-auto'>
+      <div className='bg-white w-[100vw] lg:w-[33vw] p-3 h-[65vh] lg:h-[60vh] lg:p-8 lg:rounded-br-full rounded-br-3xl flex flex-col overflow-hidden'>
+       <div>
+       <div className='flex flex-col cursor-pointer gap-[20px]'>
           <div className='flex items-center gap-[101px] lg:gap-[100px] text-gray-500'>
             <h1 className='font-bold text-xs hover:text-blue-600 duration-500'>DAY</h1>
             <h1 className='font-bold text-xs hover:text-blue-600 duration-500'>MONTH</h1>
@@ -78,7 +79,7 @@ const Hero = () => {
                 type="text"
                 value={inputDay}
                 onChange={(e) => setInputDay(e.target.value)}
-                className='w-[70px] lg:w-[70px] transition-all border border-gray-300 px-3 py-1 focus:outline-none overflow-hidden'
+                className='w-[70px] lg:w-[70px] border border-gray-300 px-3 py-1 focus:outline-none overflow-hidden'
               />
             </div>
             <div>
@@ -86,7 +87,7 @@ const Hero = () => {
                 type="text"
                 value={inputMonth}
                 onChange={(e) => setInputMonth(e.target.value)}
-                className='w-[70px] sm:w-[70px] transition-all border border-gray-300 px-3 py-1 focus:outline-none overflow-hidden'
+                className='w-[70px] sm:w-[70px] border border-gray-300 px-3 py-1 focus:outline-none overflow-hidden'
               />
             </div>
             <div>
@@ -94,7 +95,7 @@ const Hero = () => {
                 type="text"
                 value={inputYear}
                 onChange={(e) => setInputYear(e.target.value)}
-                className='w-[70px] sm:w-[70px] transition-all border border-gray-300 px-3 py-1 focus:outline-none overflow-hidden'
+                className='w-[70px] sm:w-[70px] border border-gray-300 px-3 py-1 focus:outline-none overflow-hidden'
               />
             </div>
           </div>
@@ -120,6 +121,7 @@ const Hero = () => {
             <h1 className='font-extrabold font-serif text-5xl'><span className='text-orange-700'>{day}</span> Days</h1>
           </div>
         </div>
+       </div>
       </div>
     </div>
   );
